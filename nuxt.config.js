@@ -7,7 +7,7 @@ export default {
   // Github Pages Deplpoy config
   ssr: true,
   router: {
-    base: '/scepsa/'
+    base: '/scepsa'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
