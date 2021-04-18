@@ -5,6 +5,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // Github Pages Deplpoy config
+  router: {
+    base: '/scepsa/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'SCEPSA',
