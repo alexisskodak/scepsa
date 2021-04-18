@@ -48,6 +48,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/robots',
+    'nuxt-webfontloader',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
