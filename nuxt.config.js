@@ -4,8 +4,8 @@ const isDev = NODE_ENV === "development";
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
   // Github Pages Deplpoy config
+  mode: 'static',
   router: {
     base: '/scepsa/'
   },
