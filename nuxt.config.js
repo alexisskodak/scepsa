@@ -57,6 +57,9 @@ export default {
     },
     meta: {
       theme_color: '#df0000'
+    },
+    icon: {
+      fileName: '/icon.png'
     }
   },
 
