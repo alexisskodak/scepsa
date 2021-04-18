@@ -5,7 +5,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   // Github Pages Deplpoy config
-  mode: 'static',
+  mode: 'spa',
   router: {
     base: '/scepsa/'
   },
