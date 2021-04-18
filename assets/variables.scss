@@ -1,0 +1,13 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+
+$body-font-family: 'Noto Sans JP', sans-serif;
+$font-size-root: 16px;
+$content-max-width: 1025px;
+$background: rgba(223,0,0,1);
+$background-height: 65vh;
+$background-min-width: 1025px;
+
+
+@import '~vuetify/src/styles/styles.sass';
