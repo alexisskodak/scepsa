@@ -81,28 +81,9 @@ export default {
 </script>
 
 <style lang="scss">
-@media screen and (max-width: $background-min-width) {
-  #article {
-    height: $background-height;
-    background: $background;
-  }
-}
-
-@media screen and (min-width: $background-min-width) {
-  #article {
-    border-bottom-right-radius: 300%;
-    height: $background-height;
-    background: $background;
-  }
-}
-
 #inline-form {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.content {
-  max-width: $content-max-width;
 }
 </style>

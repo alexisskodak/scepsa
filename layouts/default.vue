@@ -77,7 +77,24 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss">
+@media screen and (max-width: $background-min-width) {
+  #article {
+    height: $background-height;
+    background: $background;
+  }
+}
+
+@media screen and (min-width: $background-min-width) {
+  #article {
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    height: $background-height;
+    background: $background;
+    border-bottom: 75px solid rgba(223,0,0,1);
+  }
+}
+
 article:nth-child(even) {
   background-color: #f8f9fa;
 }

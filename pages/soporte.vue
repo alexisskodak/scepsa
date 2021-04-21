@@ -71,20 +71,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media screen and (max-width: $background-min-width) {
-  #article {
-    height: $background-height;
-    background: $background;
-  }
-}
-
-@media screen and (min-width: $background-min-width) {
-  #article {
-    border-bottom-right-radius: 300%;
-    height: $background-height;
-    background: $background;
-  }
-}
 
 #grid {
   display: grid;

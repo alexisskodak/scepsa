@@ -148,32 +148,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-article:nth-child(even) {
-  background-color: #f8f9fa;
-}
-
-@media screen and (max-width: $background-min-width) {
-  #article {
-    height: $background-height;
-    background: $background;
-  }
-}
-
-@media screen and (min-width: $background-min-width) {
-  #article {
-    border-bottom-right-radius: 300%;
-    height: $background-height;
-    background: $background;
-  }
-}
-
 #grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem
-}
-
-.content {
-  max-width: $content-max-width;
 }
 </style>
