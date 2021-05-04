@@ -1,9 +1,10 @@
 <template>
   <v-app dark>
-    <v-app-bar fixed app clipped-left dark>
+    <v-app-bar fixed app clipped-left dark hide-on-scroll dense>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-img :src="require('@/static/logo_scepsa_min_2.png')" max-width="58" max-height="38" contain></v-img>
+      <v-img :src="require('@/static/logo_processed180.png')" max-width="50" max-height="50"></v-img>
     </v-app-bar>
+
     <v-navigation-drawer v-model="drawer" temporary app dark>
       <v-list-item>
         <v-list-item-content>
@@ -26,14 +27,13 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
     <v-main>
       <v-container class="px-0 py-0" fluid>
         <nuxt/>
       </v-container>
     </v-main>
-    <v-footer app padless>
-      <span>SCEPSA &copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+
   </v-app>
 </template>
 
@@ -87,12 +87,14 @@ export default {
 
 @media screen and (min-width: $background-min-width) {
   #article {
-    border-bottom-left-radius: 150px;
-    border-bottom-right-radius: 150px;
-    height: $background-height;
+    border-bottom-right-radius: 300%;
+    height: 400px;
     background: $background;
-    border-bottom: 75px solid rgba(223,0,0,1);
   }
+}
+
+.content {
+  max-width: $content-max-width;
 }
 
 article:nth-child(even) {
