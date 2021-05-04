@@ -4,6 +4,7 @@
       <v-container class="content">
 
         <v-sheet class="pa-5 pa-md-10 rounded-xl" elevation="6">
+
           <h3 class="text-md-h2 text-h4 font-weight-black mb-5">Servicios</h3>
 
           <p class="text-md-h4 text-h5">
@@ -25,31 +26,22 @@
             </v-list-item>
           </v-list>
 
-          <v-divider class="my-5"></v-divider>
+
         </v-sheet>
       </v-container>
     </article>
 
-    <article class="py-5 mb-5" style="background-color: #f8f9fa">
-      <v-container class="content" id="grid">
-        <v-sheet class="pa-5 pa-md-10 rounded-xl" elevation="6">
-          <p class="title">Los servicios que brindamos</p>
-          <v-list dense>
-            <v-list-item v-for="(item, index) in services" :key="index">
-              <v-list-item-icon>
-                <v-icon>$vuetify.icons.mdiCheckCircle</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>{{ item }}</v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-sheet>
-        <v-sheet class="pa-5 pa-md-10 rounded-xl" elevation="6">
-          <p class="title">Consultoría de negocios</p>
-          <p class="body-1">
-            Por medio de la Alianza Estratégica con empresas de consultoría Nacionales e Internacionales y aunado a
-            la
-            red de asociados y partners de negocios, SCEPSA puede ofrecer Consultoría en temas de negocios como:
-          </p>
+    <article class="py-15 mb-5" style="background-color: #f8f9fa">
+      <v-container id="grid">
+
+        <v-sheet class="rounded-xl my-7" elevation="3">
+          <div class="pa-2 pa-md-5">
+            <p class="title">Consultoría de negocios</p>
+            <p class="body-1">
+              Por medio de la Alianza Estratégica con empresas de consultoría Nacionales e Internacionales, SCEPSA puede
+              ofrecer Consultoría en temas de negocios como:
+            </p>
+          </div>
 
           <v-list dense>
             <v-list-item v-for="(item, index) in themes" :key="index">
@@ -59,19 +51,52 @@
               <v-list-item-content>{{ item }}</v-list-item-content>
             </v-list-item>
           </v-list>
+        </v-sheet>
 
-          <p class="title">
-            Y por supuesto todos los temas relativos al Cumplimiento de Normas Internacionales
-          </p>
+        <v-sheet class="rounded-xl" elevation="12">
+
+          <v-banner>
+            <span class="text-h6">Los servicios que brindamos</span>
+          </v-banner>
+
+          <v-img
+            :src="require('@/static/stock3.jpg')"
+            height="250px"
+            gradient="to bottom, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0)"
+          >
+          </v-img>
+
+          <v-expansion-panels accordion focusable class="rounded-b-xl">
+            <v-expansion-panel v-for="(item, index) in services" :key="index">
+              <v-expansion-panel-header disable-icon-rotate>
+                {{ item.header }}
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                {{ item.content }}
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+
+
+
+        </v-sheet>
+
+        <v-sheet class="rounded-xl my-7" elevation="3">
+          <div class="pa-2 pa-md-5">
+            <p class="title">
+              Cumplimiento de normas Internacionales
+            </p>
+          </div>
           <v-list>
             <v-list-item v-for="(item, index) in norms" :key="index">
               <v-list-item-icon>
                 <v-icon>$vuetify.icons.mdiShieldCheck</v-icon>
               </v-list-item-icon>
-              <v-list-item-content>{{ item }}</v-list-item-content>
+              <v-list-item-content class="font-weight-bold">{{ item }}</v-list-item-content>
             </v-list-item>
           </v-list>
         </v-sheet>
+
       </v-container>
     </article>
   </section>
@@ -93,14 +118,35 @@ export default {
       }
     ],
     services: [
-      'Capacitación básica y avanzada para los Sistemas SOFTEXPERT®, FutureSQC® y SCEPSA T&T',
-      'Consultoría para la Implantación, desde 1 día hasta un proyecto llave en mano.',
-      'Capacitación Teórico-Práctica y Consultoría en Control Estadístico de Procesos Metrología, Sistemas de Calidad, ISO-9000, BSC, Mapeo de Procesos entre otros',
-      'Desarrollos a la medida de sus necesidades en temas como: Calidad, Procesos, ISO9000, Ingeniería y Estadística.',
-      'Asesoría, Soporte y Seguimiento en la implantación de todos los sistemas.',
-      'Integración Informática de su Equipo de Medición, Procesos y Laboratorio.',
-      'Proyectos llave-en-mano de Integración de Computación Industrial.',
-      'Instalación de Redes Locales especializadas para plantas y áreas críticas.'
+      {
+        header: 'Capacitación',
+        content: 'Básica y avanzada. Para los Sistemas SOFTEXPERT®, FutureSQC® y SCEPSA T&T'
+      },
+      {
+        header: 'Consultoría',
+        content: 'Para la Implantación desde 1 día hasta un proyecto llave en mano.'
+      },
+      {
+        header: 'Capacitación Teórico-Práctica',
+        content: 'Control Estadístico de Procesos Metrología, Sistemas de Calidad, ISO-9000, BSC, Mapeo de Procesos entre otros'
+      },
+      {
+        header: 'Desarrollos a la medida',
+        content: 'Calidad, Procesos, ISO9000, Ingeniería y Estadística.'
+      },
+      {
+        header: 'Asesoría',
+        content: 'Soporte y Seguimiento en la implantación de todos los sistemas.'
+      },
+      {
+        header: 'Integración Informática',
+        content: 'Para Equipo de Medición, Procesos y Laboratorio.'
+      },
+      {
+        header: 'Proyectos llave-en-mano',
+        content: 'Integración de Computación Industrial.'
+      },
+      // 'Instalación de Redes Locales especializadas para plantas y áreas críticas.'
     ],
     themes: [
       'Balanced Scorecard',
@@ -124,8 +170,8 @@ export default {
 
 #grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 </style>

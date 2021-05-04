@@ -6,25 +6,22 @@
         <h1 class="text-md-h2 text-h3 font-weight-black mb-5">
           SCEPSA
         </h1>
-        <p class="text-md-h4 text-h5">
+        <h2 class="text-md-h4 text-h5">
           Tecnología en Soluciones Integrales para Mejora de Procesos y Gestión de Resultados.
-        </p>
+        </h2>
       </v-container>
       <v-container class="content">
         <v-sheet class="pa-5 pa-md-10 rounded-xl elevation-6">
-          <h2 class="text-md-h3 text-h4 font-weight-black mb-5">
-            Soluciones de Software Garantizadas y con Alta Rentabilidad
-          </h2>
-          <p class="text-md-h4 text-h5">
-            Implantaciones exitosas por medio de metodologías probadas en cientos de
-            empresas y a un precio razonable.
-          </p>
 
-          <p class="text-md-h4 text-h5">
-            Explora lo que tenemos para ofrecer, más de 25 años de experiencia nos respaldan.
-          </p>
+            <h3 class="text-md-h4 text-h5 mb-5 text-center">
+              Soluciones de Software Garantizadas y con Alta Rentabilidad
+            </h3>
+            <p class="body-1">
+              Implantaciones exitosas por medio de metodologías probadas en cientos de
+              empresas y a un precio razonable. <br>
+              Explora lo que tenemos para ofrecer, más de 25 años de experiencia nos respaldan.
+            </p>
 
-          <v-divider class="my-10"></v-divider>
 
           <div id="btn-grid">
             <v-btn depressed dark to="/soluciones" aria-label="ir a soluciones">soluciones</v-btn>
@@ -110,9 +107,5 @@ export default {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
-
-.content {
-  max-width: 992px;
 }
 </style>
